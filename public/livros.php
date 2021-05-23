@@ -25,13 +25,22 @@
         $autor = 'autor';
         $classificacao = 'classificacao';
         /*TODO-1: Adicione uma variavel para cada coluna */
-
+        $data_primeira_publicacao = 'data_primeira_publicacao';
+        $categoria = 'categoria';
+        $isbn = 'isbn';
+        $paginas = 'paginas';
+        $editora = 'editora';
 
         $sql =
             'SELECT ' . $titulo .
             '     , ' . $autor .
             '     , ' . $classificacao .
             /*TODO-2: Adicione cada variavel a consulta abaixo */
+            '     , ' . $data_primeira_publicacao .
+            '     , ' . $categoria .
+            '     , ' . $isbn .
+            '     , ' . $paginas .
+            '     , ' . $editora .
             '  FROM livros';
 
 
@@ -47,8 +56,13 @@
             '    <tr>' .
             '        <th>' . $titulo . '</th>' .
             '        <th>' . $autor . '</th>' .
-            /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
             '        <th>' . $classificacao . '</th>' .
+            /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
+            '        <th>' . $data_primeira_publicacao . '</th>' .
+            '        <th>' . $categoria . '</th>' .
+            '        <th>' . $isbn . '</th>' .
+            '        <th>' . $paginas . '</th>' .
+            '        <th>' . $editora . '</th>' .
             '    </tr>';
 
         echo $cabecalho;
@@ -60,8 +74,13 @@
 
                 echo '<td>' . $registro[$titulo] . '</td>' .
                     '<td>' . $registro[$autor] . '</td>' .
+                    '<td>' . $registro[$classificacao] . '</td>' .
                     /* TODO-4: Adicione a tabela os novos registros. */
-                    '<td>' . $registro[$classificacao] . '</td>';
+                    '<td>' . $registro[$data_primeira_publicacao] . '</td>' .
+                    '<td>' . $registro[$categoria] . '</td>' .
+                    '<td>' . $registro[$isbn] . '</td>' .
+                    '<td>' . $registro[$paginas] . '</td>' .
+                    '<td>' . $registro[$editora] . '</td>';
                 echo '</tr>';
             }
             echo '</table>';
